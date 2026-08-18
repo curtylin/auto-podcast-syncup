@@ -4,8 +4,18 @@ from pathlib import Path
 import feedparser
 import requests
 
+podcasts = {
+  "Morning Brew Daily" : "https://feeds.megaphone.fm/MOBI8777994188",
+  "THIS CAR POD! with Doug DeMuro & Friends!" : "https://feeds.megaphone.fm/TBIEA9794787572",
+  "Science Vs" : "https://feeds.megaphone.fm/sciencevs",
+  "The Journal." : "https://video-api.wsj.com/podcast/rss/wsj/the-journal",
+  "Planet Money" : "https://feeds.npr.org/510289/podcast.xml",
+  "The Indicator from Planet Money" : "https://feeds.npr.org/510325/podcast.xml"
+}
+
+
 # ================= Configuration =================
-PODCAST_RSS_URL = "https://example.com/podcast/rss"  # Replace with your RSS feed
+PODCAST_RSS_URL = podcasts["Planet Money"]
 TARGET_SUBFOLDER = "Podcasts"  # Folder created on the headphones
 LIMIT = 3  # Number of latest episodes to keep synced
 # =================================================
